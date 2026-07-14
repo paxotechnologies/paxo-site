@@ -3,522 +3,267 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PAXO — Join the Founding Waitlist</title>
-<meta name="description" content="PAXO is zero-commission rideshare. Drivers keep 100% of every fare, riders pay less with no surge pricing. Join the founding waitlist — launching in Pittsburgh, PA."/>
-<meta property="og:title" content="PAXO — Drivers keep more. Riders pay less."/>
-<meta property="og:description" content="Zero commission rideshare. Drivers keep 100% of every fare, riders pay less. No surge, ever. Join the founding waitlist for Pittsburgh."/>
+<title>PAXO — Fair rides. For everyone.</title>
+<meta name="description" content="Zero-commission rideshare launching in Pittsburgh. Drivers keep 100% of every fare. Riders pay less with no surge pricing. Join the founding waitlist."/>
+<meta property="og:title" content="PAXO — Fair rides. For everyone."/>
+<meta property="og:description" content="Drivers keep 100% of every fare. Riders pay less. No commission, no surge. Launching in Pittsburgh."/>
+<meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/paxo.css"/>
 <style>
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  .hero{position:relative;overflow:hidden;padding:70px 0 78px;
+    background:
+      radial-gradient(1100px 620px at 78% -10%, rgba(37,99,235,.13), transparent 60%),
+      radial-gradient(900px 560px at 8% 8%, rgba(22,163,74,.11), transparent 62%),
+      linear-gradient(180deg,#FBFDFF 0%,#F2F7FD 100%);}
+  .hero::before{content:'';position:absolute;inset:0;
+    background-image:url('/images/hero-bg.jpg');background-size:cover;background-position:center 62%;
+    opacity:.16;pointer-events:none}
+  .hero::after{content:'';position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,.86) 68%,#fff 100%)}
+  .hero-in{position:relative;z-index:2;text-align:center}
+  .hero h1{margin:20px auto 18px;max-width:15ch}
+  .hero h1 .g{background:linear-gradient(120deg,var(--dg) 0%,var(--teal) 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero h1 .b{background:linear-gradient(120deg,var(--rb) 0%,var(--violet) 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero-sub{font-size:clamp(16px,2.1vw,19.5px);color:var(--slate);max-width:600px;
+    margin:0 auto 34px;line-height:1.65}
+  .hero-sub b{color:var(--ink);font-weight:700}
+  .figs{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+  .fig{background:rgba(255,255,255,.82);backdrop-filter:blur(8px);border:1px solid var(--hair);
+    border-radius:var(--r);padding:14px 22px;box-shadow:var(--shadow-sm);min-width:132px}
+  .fig b{display:block;font-size:27px;font-weight:800;letter-spacing:-.03em;line-height:1}
+  .fig.g b{color:var(--dg)} .fig.b b{color:var(--rb)} .fig.v b{color:var(--violet)}
+  .fig span{font-size:12px;color:var(--mute);font-weight:600;margin-top:5px;display:block}
 
-  :root{
-    --teal:#0D9488; --teal-lt:#14B8A8; --teal-dk:#065F52;
-    --navy:#0B1F3A; --navy-2:#112240;
-    --white:#FFFFFF; --mist:#F0FDFA;
-    --grey:#94A3B8; --grey-lt:#CBD5E1; --line:rgba(255,255,255,.08);
-    --amber:#F59E0B;
-  }
+  .paths{padding:66px 0 20px}
+  .paths-head{text-align:center;margin-bottom:36px}
+  .paths-head h2{margin-bottom:11px}
+  .paths-head p{color:var(--slate);font-size:16.5px;max-width:520px;margin:0 auto}
+  .path-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .path{position:relative;border-radius:var(--r-xl);overflow:hidden;text-decoration:none;color:inherit;
+    display:flex;flex-direction:column;border:1px solid var(--hair);box-shadow:var(--shadow);
+    transition:transform .22s cubic-bezier(.4,0,.2,1),box-shadow .22s}
+  .path:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+  .path:focus-visible{outline:3px solid var(--rb);outline-offset:3px}
+  .path-img{height:196px;position:relative;overflow:hidden}
+  .path-img.d{background:linear-gradient(135deg,#DCFCE7,#86EFAC)}
+  .path-img.r{background:linear-gradient(135deg,#DBEAFE,#93C5FD)}
+  .path-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .path-img::after{content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.28) 100%)}
+  .path-tag{position:absolute;top:14px;left:14px;z-index:2;background:rgba(255,255,255,.94);
+    border-radius:100px;padding:5px 13px;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  .path-tag.d{color:var(--dg-dk)} .path-tag.r{color:var(--rb-dk)}
+  .path-body{padding:24px;background:var(--paper);flex:1;display:flex;flex-direction:column}
+  .path-body h3{font-size:22px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+  .path-body>p{font-size:14.5px;color:var(--slate);line-height:1.6;margin-bottom:16px}
+  .path-list{list-style:none;margin-bottom:20px;display:grid;gap:8px}
+  .path-list li{font-size:13.5px;color:var(--slate);display:flex;gap:9px;align-items:flex-start;line-height:1.5}
+  .path-list li svg{flex-shrink:0;margin-top:2px}
+  .path-cta{margin-top:auto}
 
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--navy); color:var(--white);
-    font-family:'Inter',system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased; overflow-x:hidden;
-  }
+  .why{padding:74px 0}
+  .why-head{text-align:center;margin-bottom:38px}
+  .why-head h2{margin-bottom:11px}
+  .why-head p{color:var(--slate);font-size:16.5px;max-width:560px;margin:0 auto}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .why-card{padding:26px 22px;border-radius:var(--r-lg);border:1px solid var(--hair);
+    background:var(--paper);box-shadow:var(--shadow-sm)}
+  .why-ico{width:44px;height:44px;border-radius:13px;display:flex;align-items:center;
+    justify-content:center;margin-bottom:15px}
+  .why-card h3{margin-bottom:7px}
+  .why-card p{font-size:14px;color:var(--slate);line-height:1.6}
 
-  /* Ambient background */
-  .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;
-    background-image:
-      linear-gradient(rgba(13,148,136,.04) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(13,148,136,.04) 1px,transparent 1px);
-    background-size:48px 48px}
-  .bg-glow{position:fixed;top:-25%;left:50%;transform:translateX(-50%);
-    width:800px;height:800px;z-index:0;pointer-events:none;
-    background:radial-gradient(circle,rgba(13,148,136,.13) 0%,transparent 70%)}
+  .band{background:linear-gradient(135deg,var(--navy) 0%,#183A80 52%,var(--violet) 100%);
+    border-radius:var(--r-xl);padding:52px 40px;text-align:center;color:#fff;position:relative;
+    overflow:hidden;box-shadow:var(--shadow-xl)}
+  .band::before{content:'';position:absolute;inset:0;
+    background:radial-gradient(620px 320px at 22% 12%,rgba(34,197,94,.22),transparent 60%)}
+  .band>*{position:relative;z-index:1}
+  .band h2{margin-bottom:12px}
+  .band p{color:#CBD8EE;font-size:16.5px;max-width:520px;margin:0 auto 28px;line-height:1.6}
+  .band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .band .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.26);backdrop-filter:blur(6px)}
+  .band .btn-ghost:hover{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.45)}
 
-  .stage{position:relative;z-index:1;min-height:100vh;
-    display:flex;flex-direction:column;align-items:center;
-    padding:40px 20px 60px}
+  .puc{margin:62px auto 0;max-width:640px;text-align:center;background:var(--wash);
+    border:1px solid var(--hair);border-radius:var(--r-lg);padding:22px 26px}
+  .puc h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+  .puc p{font-size:13.5px;color:var(--slate);line-height:1.6}
 
-  /* ── Logo ── */
-  .logo-row{display:flex;align-items:center;gap:12px;margin-bottom:52px}
-  .logo-mark{width:46px;height:46px;background:var(--teal);border-radius:14px;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 0 32px rgba(13,148,136,.42)}
-  .logo-word{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;
-    letter-spacing:.2em}
-
-  /* ── Panels ── */
-  .panel{width:100%;max-width:720px;text-align:center;
-    animation:rise .5s cubic-bezier(.16,1,.3,1) both}
-  .panel[hidden]{display:none}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-
-  /* ── Hero ── */
-  .badge{display:inline-flex;align-items:center;gap:7px;
-    background:rgba(13,148,136,.12);border:1px solid rgba(13,148,136,.3);
-    border-radius:100px;padding:6px 15px;font-size:11px;font-weight:600;
-    letter-spacing:.12em;color:var(--teal-lt);text-transform:uppercase;margin-bottom:26px}
-  .badge::before{content:'';width:6px;height:6px;background:var(--teal-lt);
-    border-radius:50%;animation:blink 2s ease-in-out infinite}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-
-  h1{font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(34px,6.5vw,60px);font-weight:700;line-height:1.06;
-    letter-spacing:-.02em;margin-bottom:20px}
-  h1 .accent{color:var(--teal-lt)}
-
-  .lede{font-size:clamp(15px,2.2vw,18px);color:var(--grey);line-height:1.6;
-    max-width:490px;margin:0 auto 40px}
-  .lede strong{color:var(--white);font-weight:500}
-
-  .stats{display:flex;gap:1px;background:var(--line);border-radius:14px;
-    overflow:hidden;border:1px solid var(--line);max-width:520px;margin:0 auto 36px}
-  .stat{flex:1;padding:20px 16px;background:rgba(11,31,58,.6)}
-  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:30px;
-    font-weight:700;color:var(--teal-lt);line-height:1;margin-bottom:5px}
-  .stat span{font-size:11px;color:var(--grey);line-height:1.4}
-
-
-  /* ── Why both win ── */
-  .why{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:44px;text-align:left}
-  .why-col{background:rgba(255,255,255,.03);border:1px solid var(--line);
-    border-radius:14px;padding:20px}
-  .why-head{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;
-    letter-spacing:.08em;text-transform:uppercase;color:var(--teal-lt);margin-bottom:14px}
-  .why-col ul{list-style:none;display:grid;gap:10px}
-  .why-col li{font-size:13.5px;color:var(--grey-lt);line-height:1.5;
-    display:flex;gap:9px;align-items:flex-start}
-  .why-col li::before{content:'';width:5px;height:5px;border-radius:50%;
-    background:var(--teal);flex-shrink:0;margin-top:7px}
-
-  /* ── Choice cards ── */
-  .choose-label{font-size:12px;color:var(--grey);letter-spacing:.1em;
-    text-transform:uppercase;font-weight:600;margin-bottom:16px}
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:36px}
-  .card{background:rgba(255,255,255,.04);border:1px solid var(--line);
-    border-radius:16px;padding:28px 22px;cursor:pointer;text-align:left;
-    transition:border-color .2s,background .2s,transform .12s;
-    font-family:inherit;color:inherit}
-  .card:hover{border-color:var(--teal);background:rgba(13,148,136,.08)}
-  .card:active{transform:scale(.985)}
-  .card:focus-visible{outline:2px solid var(--teal-lt);outline-offset:3px}
-  .card-ico{width:40px;height:40px;border-radius:11px;background:rgba(13,148,136,.16);
-    display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .card h3{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:600;
-    margin-bottom:6px}
-  .card p{font-size:13px;color:var(--grey);line-height:1.5;margin-bottom:14px}
-  .card .go{font-size:12px;font-weight:600;color:var(--teal-lt);
-    display:flex;align-items:center;gap:5px}
-
-  .city{display:flex;align-items:center;justify-content:center;gap:7px;
-    font-size:12px;color:var(--grey)}
-  .city svg{color:var(--teal-lt);flex-shrink:0}
-
-  /* ── Forms ── */
-  .back{background:none;border:none;color:var(--grey);font-size:13px;
-    cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:6px;
-    margin-bottom:20px;padding:6px 2px;border-radius:6px}
-  .back:hover{color:var(--white)}
-  .back:focus-visible{outline:2px solid var(--teal-lt);outline-offset:2px}
-
-  .form-head{text-align:left;margin-bottom:24px}
-  .form-head h2{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;
-    margin-bottom:8px}
-  .form-head p{font-size:14px;color:var(--grey);line-height:1.55}
-
-  .perks{background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.22);
-    border-radius:13px;padding:16px 18px;margin-bottom:26px;text-align:left}
-  .perks h4{font-size:11px;letter-spacing:.09em;text-transform:uppercase;
-    color:var(--teal-lt);font-weight:700;margin-bottom:11px}
-  .perks ul{list-style:none;display:grid;gap:8px}
-  .perks li{font-size:13px;color:var(--grey-lt);display:flex;gap:9px;align-items:flex-start;line-height:1.45}
-  .perks li::before{content:'';width:5px;height:5px;border-radius:50%;
-    background:var(--teal-lt);flex-shrink:0;margin-top:7px}
-
-  form{text-align:left}
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .field{margin-bottom:14px}
-  .field label{display:block;font-size:12px;font-weight:600;color:var(--grey-lt);
-    margin-bottom:6px}
-  .field .opt{color:var(--grey);font-weight:400}
-  .field input,.field select{width:100%;background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.11);border-radius:10px;padding:12px 14px;
-    color:var(--white);font-size:14px;font-family:inherit;outline:none;
-    transition:border-color .18s}
-  .field input::placeholder{color:#5A6B85}
-  .field input:focus,.field select:focus{border-color:var(--teal)}
-  .field select{appearance:none;cursor:pointer;
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat:no-repeat;background-position:right 14px center}
-  .field select option{background:var(--navy-2);color:var(--white)}
-
-  .consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0 20px;
-    font-size:12px;color:var(--grey);line-height:1.5}
-  .consent input{width:16px;height:16px;margin-top:2px;flex-shrink:0;
-    accent-color:var(--teal);cursor:pointer}
-  .consent a{color:var(--teal-lt);text-decoration:underline;text-underline-offset:2px}
-
-  .submit{width:100%;background:var(--teal);color:#fff;border:none;
-    border-radius:11px;padding:15px;font-size:15px;font-weight:600;
-    font-family:inherit;cursor:pointer;transition:background .18s,transform .1s}
-  .submit:hover{background:var(--teal-lt)}
-  .submit:active{transform:scale(.99)}
-  .submit:focus-visible{outline:2px solid var(--teal-lt);outline-offset:3px}
-  .submit:disabled{opacity:.5;cursor:not-allowed}
-
-  .fineprint{font-size:11px;color:#5A6B85;line-height:1.5;margin-top:14px;text-align:center}
-
-  /* ── Success ── */
-  .tick{width:66px;height:66px;border-radius:50%;background:rgba(13,148,136,.16);
-    border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;
-    margin:0 auto 24px;animation:pop .45s cubic-bezier(.34,1.56,.64,1) both}
-  @keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
-  .success h2{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;margin-bottom:12px}
-  .success p{font-size:15px;color:var(--grey);line-height:1.6;max-width:420px;margin:0 auto 30px}
-  .success p strong{color:var(--white)}
-
-  footer{margin-top:auto;padding-top:52px;text-align:center;width:100%;max-width:720px}
-  .foot-line{border-top:1px solid var(--line);padding-top:22px;
-    font-size:11px;color:var(--grey);letter-spacing:.02em;line-height:1.7}
-  .foot-line a{color:var(--grey-lt);text-decoration:none}
-  .foot-line a:hover{color:var(--teal-lt)}
-
-  @media(max-width:560px){
-    .why{grid-template-columns:1fr}
-    .cards{grid-template-columns:1fr}
-    .grid-2{grid-template-columns:1fr}
-    .stats{flex-direction:column}
-    .stage{padding:32px 16px 48px}
-  }
-  @media(prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important}
-    html{scroll-behavior:auto}
-  }
+  @media(max-width:860px){.why-grid{grid-template-columns:1fr}.path-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){.hero{padding:48px 0 56px}.band{padding:38px 24px}.paths,.why{padding:48px 0}}
 </style>
 </head>
 <body>
-<div class="bg-grid"></div>
-<div class="bg-glow"></div>
 
-<div class="stage">
-
-  <div class="logo-row">
-    <div class="logo-mark">
-      <svg width="26" height="26" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-        <path d="M8 20L10.5 13H25.5L28 20" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-        <rect x="6" y="20" width="24" height="8" rx="3" fill="#fff" fill-opacity=".16" stroke="#fff" stroke-width="2.2"/>
-        <circle cx="11" cy="28" r="2.4" fill="#fff"/><circle cx="25" cy="28" r="2.4" fill="#fff"/>
-        <path d="M14 20v-3M22 20v-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="/">
+      <span class="logo-txt">
+        <span class="logo-pin">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.22)"/>
+            <path d="M8 14.5c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="9" cy="9.5" r="1.4" fill="#fff"/><circle cx="15" cy="9.5" r="1.4" fill="#fff"/>
+          </svg>
+        </span>PAX<span style="letter-spacing:-.04em">O</span>
+      </span>
+    </a>
+    <div style="display:flex;gap:9px;align-items:center">
+      <a class="btn btn-ghost" href="/driver.html" style="padding:9px 16px;font-size:14px">Drive</a>
+      <a class="btn btn-ride" href="/rider.html" style="padding:9px 16px;font-size:14px">Ride</a>
     </div>
-    <div class="logo-word">PAXO</div>
   </div>
+</nav>
 
-  <!-- ═══ PANEL: CHOOSE ═══ -->
-  <section class="panel" id="p-choose">
-    <div class="badge">Launching in Pittsburgh, PA</div>
-    <h1>Drivers keep more.<br/><span class="accent">Riders pay less.</span></h1>
-    <p class="lede">
-      Every other rideshare app takes a cut of your fare. <strong>PAXO takes nothing.</strong>
-      Drivers pay one flat daily rate and keep 100% of what they earn — so fares come down
-      for riders too. Same ride, fairer for everyone in the car.
+<header class="hero">
+  <div class="shell hero-in">
+    <span class="pill pill-live">Launching in Pittsburgh, PA</span>
+    <h1>Fair rides.<br/><span class="g">For drivers.</span> <span class="b">For riders.</span></h1>
+    <p class="hero-sub">
+      Every other app takes a cut of your fare. <b>PAXO takes none of it.</b>
+      Drivers pay one flat daily rate and keep everything they earn — which is exactly
+      why riders pay less. Same road. Fairer for everyone on it.
     </p>
-
-    <div class="stats">
-      <div class="stat"><b>100%</b><span>of every fare stays<br/>with the driver</span></div>
-      <div class="stat"><b>$0</b><span>commission taken<br/>from any ride</span></div>
-      <div class="stat"><b>Never</b><span>surge pricing,<br/>at any hour</span></div>
+    <div class="figs">
+      <div class="fig g"><b>100%</b><span>Driver keeps every fare</span></div>
+      <div class="fig b"><b>$0</b><span>Commission, ever</span></div>
+      <div class="fig v"><b>Never</b><span>Surge pricing</span></div>
     </div>
+  </div>
+</header>
 
-    <div class="why">
-      <div class="why-col">
-        <div class="why-head">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM19 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
-            <path d="M3 17V9l2-4h14l2 4v8"/><path d="M5 9h14"/>
-          </svg>
-          For drivers
+<section class="paths">
+  <div class="shell">
+    <div class="paths-head">
+      <h2>Which one are you?</h2>
+      <p>Founding members get in first — with rewards that later sign-ups won't get.</p>
+    </div>
+    <div class="path-grid">
+      <a class="path" href="/driver.html">
+        <div class="path-img d">
+          <span class="path-tag d">For drivers</span>
+          <img src="/images/driver.jpg" alt="" onerror="this.style.display='none'"/>
         </div>
-        <ul>
-          <li>Keep 100% of every fare and every tip</li>
-          <li>One flat daily rate — only on days you drive</li>
-          <li>No commission, no per-ride cut, ever</li>
-        </ul>
+        <div class="path-body">
+          <h3>I want to drive</h3>
+          <p>Keep every dollar you earn. Pay one simple daily rate — only on the days you actually drive.</p>
+          <ul class="path-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Priority approval at launch</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Higher launch rewards</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Founding Driver badge</li>
+          </ul>
+          <span class="btn btn-drive btn-full path-cta">Become a Founding Driver
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+      <a class="path" href="/rider.html">
+        <div class="path-img r">
+          <span class="path-tag r">For riders</span>
+          <img src="/images/rider.jpg" alt="" onerror="this.style.display='none'"/>
+        </div>
+        <div class="path-body">
+          <h3>I want to ride</h3>
+          <p>Honest prices with no surge — ever. See exactly what you saved on every single trip.</p>
+          <ul class="path-list">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> $20 ride credit at launch</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Early access before public launch</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> No surge, no hidden fees</li>
+          </ul>
+          <span class="btn btn-ride btn-full path-cta">Become a Founding Rider
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="shell">
+    <div class="why-head">
+      <h2>Why PAXO works</h2>
+      <p>One change to the business model. Two sides of the car, better off.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-ico" style="background:var(--dg-wash)">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>No commission</h3>
+        <p>Drivers pay a flat daily rate — not 30–40% of every ride. That money stays in the car instead of leaving it.</p>
       </div>
-      <div class="why-col">
-        <div class="why-head">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
-          For riders
+      <div class="why-card">
+        <div class="why-ico" style="background:var(--rb-wash)">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.3L5.8 21.3 7 14.3 2 9.4l7-.9L12 2z"/></svg>
         </div>
-        <ul>
-          <li>Lower fares — no commission baked into the price</li>
-          <li>No surge pricing, no booking fees, no service fees</li>
-          <li>See what you save on every single ride</li>
-        </ul>
+        <h3>No surge pricing</h3>
+        <p>Rain, rush hour, a concert letting out — the price is the price. What you see is what you pay.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-ico" style="background:#F5F0FF">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Nothing hidden</h3>
+        <p>No booking fees, no service fees, no mystery line items. Riders see their savings on every trip.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="choose-label">Join the founding waitlist</div>
-    <div class="cards">
-      <button class="card" onclick="show('driver')" aria-label="Join the driver waitlist">
-        <div class="card-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14B8A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM19 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
-            <path d="M3 17V9l2-4h14l2 4v8"/><path d="M5 9h14"/>
-          </svg>
-        </div>
-        <h3>I want to drive</h3>
-        <p>Keep every dollar you earn. Founding drivers get priority approval and higher launch bonuses.</p>
-        <div class="go">Founding Driver
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-      </button>
-
-      <button class="card" onclick="show('rider')" aria-label="Join the rider waitlist">
-        <div class="card-ico">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14B8A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-          </svg>
-        </div>
-        <h3>I want to ride</h3>
-        <p>Pay less on every ride, with no surge. Founding riders get $20 of credit and early access.</p>
-        <div class="go">Founding Rider
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-      </button>
+<section class="shell" style="padding-bottom:10px">
+  <div class="band">
+    <h2>Be part of the first ride</h2>
+    <p>PAXO opens in Pittsburgh soon. Founding members go first — and keep the perks for good.</p>
+    <div class="band-btns">
+      <a class="btn btn-drive btn-lg" href="/driver.html">Join as a driver</a>
+      <a class="btn btn-ghost btn-lg" href="/rider.html">Join as a rider</a>
     </div>
+  </div>
+  <div class="puc">
+    <h4>Pennsylvania launch</h4>
+    <p>PAXO is preparing to launch in Pennsylvania pending approval from the Pennsylvania Public Utility Commission. Founding members receive priority onboarding once service becomes available.</p>
+  </div>
+</section>
 
-    <div class="city">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-      </svg>
-      Launching first in Pittsburgh, Pennsylvania
-    </div>
-  </section>
-
-  <!-- ═══ PANEL: DRIVER ═══ -->
-  <section class="panel" id="p-driver" hidden>
-    <button class="back" onclick="show('choose')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back
-    </button>
-
-    <div class="form-head">
-      <h2>Become a Founding Driver</h2>
-      <p>Tell us a bit about you. We'll reach out when PAXO opens in your area — founding drivers go first.</p>
-    </div>
-
-    <div class="perks">
-      <h4>Founding driver benefits</h4>
-      <ul>
-        <li>Priority approval — front of the queue at launch</li>
-        <li>Higher launch bonuses than later sign-ups</li>
-        <li>Founding Driver badge on your profile</li>
-        <li>Extra referral rewards for bringing other drivers</li>
-      </ul>
-    </div>
-
-    <form name="driver-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handle(event,'driver')">
-      <input type="hidden" name="form-name" value="driver-waitlist"/>
-      <p hidden><label>Skip this: <input name="bot-field"/></label></p>
-
-      <div class="field">
-        <label for="d-name">Full name</label>
-        <input id="d-name" name="name" type="text" required autocomplete="name" placeholder="Marcus Johnson"/>
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <span class="logo-txt" style="color:#fff">
+          <span class="logo-pin">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.22)"/>
+              <path d="M8 14.5c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="9" cy="9.5" r="1.4" fill="#fff"/><circle cx="15" cy="9.5" r="1.4" fill="#fff"/></svg>
+          </span>PAXO
+        </span>
+        <p class="foot-tag">Zero-commission rideshare. Drivers keep 100%. Riders pay less. Launching in Pittsburgh, PA.</p>
       </div>
-
-      <div class="grid-2">
-        <div class="field">
-          <label for="d-phone">Phone number</label>
-          <input id="d-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(412) 555-0134"/>
-        </div>
-        <div class="field">
-          <label for="d-email">Email</label>
-          <input id="d-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"/>
-        </div>
+      <div class="foot-links">
+        <a href="/driver.html">Drive with PAXO</a>
+        <a href="/rider.html">Ride with PAXO</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="mailto:hello@paxoride.com">Contact Us</a>
       </div>
-
-      <div class="grid-2">
-        <div class="field">
-          <label for="d-license">Valid PA driver's license?</label>
-          <select id="d-license" name="valid_license" required>
-            <option value="">Select…</option>
-            <option>Yes</option>
-            <option>Not yet</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="d-ins">Vehicle insurance?</label>
-          <select id="d-ins" name="has_insurance" required>
-            <option value="">Select…</option>
-            <option>Yes</option>
-            <option>Not yet</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <div class="field">
-          <label for="d-area">Preferred driving area</label>
-          <input id="d-area" name="preferred_area" type="text" required placeholder="e.g. Downtown, Robinson"/>
-        </div>
-        <div class="field">
-          <label for="d-avail">Availability</label>
-          <select id="d-avail" name="availability" required>
-            <option value="">Select…</option>
-            <option>Full-time</option>
-            <option>Part-time</option>
-            <option>Weekends only</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-      </div>
-
-      <label class="consent">
-        <input type="checkbox" name="consent" required/>
-        <span>I agree to be contacted about the PAXO launch and accept the
-        <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
-      </label>
-
-      <button class="submit" type="submit">Join the driver waitlist</button>
-      <p class="fineprint">
-        We only ask for vehicle and document details during real onboarding, after launch.
-        PAXO is launching pending Pennsylvania PUC approval.
-      </p>
-    </form>
-  </section>
-
-  <!-- ═══ PANEL: RIDER ═══ -->
-  <section class="panel" id="p-rider" hidden>
-    <button class="back" onclick="show('choose')">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back
-    </button>
-
-    <div class="form-head">
-      <h2>Become a Founding Rider</h2>
-      <p>Get early access and ride credit when PAXO opens in Pittsburgh.</p>
     </div>
-
-    <div class="perks">
-      <h4>Founding rider benefits</h4>
-      <ul>
-        <li>$20 in ride credit when we launch</li>
-        <li>Early access before the public launch</li>
-        <li>Referral rewards for inviting friends</li>
-        <li>No surge pricing — ever</li>
-      </ul>
+    <div class="foot-legal">
+      &copy; 2026 Paxo Technologies LLC &nbsp;·&nbsp; paxoride.com<br/>
+      PAXO is launching pending approval from the Pennsylvania Public Utility Commission.
+      Founding rider credit is subject to launch terms and availability.
     </div>
+  </div>
+</footer>
 
-    <form name="rider-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handle(event,'rider')">
-      <input type="hidden" name="form-name" value="rider-waitlist"/>
-      <p hidden><label>Skip this: <input name="bot-field"/></label></p>
-
-      <div class="field">
-        <label for="r-name">Full name</label>
-        <input id="r-name" name="name" type="text" required autocomplete="name" placeholder="Sarah Chen"/>
-      </div>
-
-      <div class="grid-2">
-        <div class="field">
-          <label for="r-email">Email</label>
-          <input id="r-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"/>
-        </div>
-        <div class="field">
-          <label for="r-phone">Phone number</label>
-          <input id="r-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(412) 555-0199"/>
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <div class="field">
-          <label for="r-zip">ZIP code or neighborhood</label>
-          <input id="r-zip" name="zip_area" type="text" required placeholder="15216 or Dormont"/>
-        </div>
-        <div class="field">
-          <label for="r-ref">Referral code <span class="opt">(optional)</span></label>
-          <input id="r-ref" name="referral_code" type="text" placeholder="Optional"/>
-        </div>
-      </div>
-
-      <label class="consent">
-        <input type="checkbox" name="consent" required/>
-        <span>I agree to be contacted about the PAXO launch and accept the
-        <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
-      </label>
-
-      <button class="submit" type="submit">Join the rider waitlist</button>
-      <p class="fineprint">
-        Founding rider credit is subject to launch terms and availability.
-        PAXO is launching pending Pennsylvania PUC approval.
-      </p>
-    </form>
-  </section>
-
-  <!-- ═══ PANEL: SUCCESS ═══ -->
-  <section class="panel success" id="p-done" hidden>
-    <div class="tick">
-      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#14B8A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-    </div>
-    <h2 id="done-title">You're on the list</h2>
-    <p id="done-msg">We'll email you as soon as PAXO opens in Pittsburgh.</p>
-    <button class="submit" style="max-width:280px;margin:0 auto" onclick="show('choose')">Back to home</button>
-  </section>
-
-  <footer>
-    <div class="foot-line">
-      &copy; 2026 Paxo Technologies LLC &nbsp;·&nbsp;
-      <a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; paxoride.com<br/>
-      PAXO is launching pending Pennsylvania Public Utility Commission approval.
-    </div>
-  </footer>
-
-</div>
-
-<script>
-  const panels = ['choose','driver','rider','done'];
-
-  function show(which){
-    panels.forEach(p => {
-      document.getElementById('p-'+p).hidden = (p !== which);
-    });
-    window.scrollTo({top:0, behavior:'instant'});
-  }
-
-  function handle(evt, type){
-    evt.preventDefault();
-    const form = evt.target;
-    const btn  = form.querySelector('.submit');
-    btn.disabled = true;
-    btn.textContent = 'Joining…';
-
-    fetch('/', {
-      method:'POST',
-      headers:{'Content-Type':'application/x-www-form-urlencoded'},
-      body: new URLSearchParams(new FormData(form)).toString()
-    })
-    .then(() => {
-      document.getElementById('done-title').textContent =
-        type === 'driver' ? "You're a Founding Driver" : "You're a Founding Rider";
-      document.getElementById('done-msg').textContent =
-        type === 'driver'
-          ? "We'll be in touch as PAXO opens in your area. Founding drivers get priority approval and higher launch bonuses."
-          : "We'll email you the moment PAXO opens in Pittsburgh — with your $20 founding rider credit ready to use.";
-      show('done');
-      form.reset();
-    })
-    .catch(() => {
-      btn.textContent = 'Something went wrong — try again';
-      btn.disabled = false;
-    });
-
-    return false;
-  }
-</script>
 </body>
 </html>
