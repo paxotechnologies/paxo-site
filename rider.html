@@ -138,7 +138,12 @@
           <div class="f"><label for="email">Email address</label>
             <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"/></div>
           <div class="f"><label for="phone">Mobile number</label>
-            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(412) 555-0199"/></div>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel"
+                   inputmode="tel" placeholder="(412) 555-0199"
+                   pattern="^(\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                   title="Enter a 10-digit US phone number"
+                   oninput="fmtPhone(this)"/>
+            <span class="err">Enter a 10-digit US phone number</span></div>
         </div>
       </div>
 
@@ -149,7 +154,12 @@
         </div>
         <div class="frow">
           <div class="f"><label for="zip">Home ZIP code</label>
-            <input id="zip" name="zip" type="text" required placeholder="15216"/></div>
+            <input id="zip" name="zip" type="text" required
+                   inputmode="numeric" placeholder="15216"
+                   pattern="^\d{5}$" maxlength="5"
+                   title="Enter a 5-digit ZIP code"
+                   oninput="this.value=this.value.replace(/\D/g,'').slice(0,5)"/>
+            <span class="err">Enter a 5-digit ZIP code</span></div>
           <div class="f"><label for="hood">Neighborhood</label>
             <select id="hood" name="neighborhood" required>
               <option value="">Select&hellip;</option>
@@ -279,6 +289,19 @@
 <script>
   var SHARE_MSG = "I just joined PAXO - a new rideshare launching in Pittsburgh with fair prices and no surge pricing. Join the founding waitlist:";
   var SHARE_URL = "https://paxoride.com";
+
+
+  // Auto-format US phone as (412) 555-0134 while typing
+  function fmtPhone(el){
+    var d = el.value.replace(/\D/g,'');
+    if(d.length && d[0]==='1') d = d.slice(1);   // tolerate a leading 1
+    d = d.slice(0,10);
+    var out = d;
+    if(d.length > 6)      out = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6);
+    else if(d.length > 3) out = '(' + d.slice(0,3) + ') ' + d.slice(3);
+    else if(d.length > 0) out = '(' + d;
+    el.value = out;
+  }
 
   function updateProgress(){
     var form = document.querySelector('form');
