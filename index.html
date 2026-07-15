@@ -20,9 +20,9 @@
       linear-gradient(180deg,#FBFDFF 0%,#F2F7FD 100%);}
   .hero::before{content:'';position:absolute;inset:0;
     background-image:url('/images/hero-bg.jpg');background-size:cover;background-position:center 62%;
-    opacity:.16;pointer-events:none}
+    opacity:.42;pointer-events:none}
   .hero::after{content:'';position:absolute;inset:0;pointer-events:none;
-    background:linear-gradient(180deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,.86) 68%,#fff 100%)}
+    background:linear-gradient(180deg,rgba(255,255,255,.35) 0%,rgba(255,255,255,.55) 45%,rgba(255,255,255,.88) 82%,#fff 100%)}
   .hero-in{position:relative;z-index:2;text-align:center}
   .hero h1{margin:20px auto 18px;max-width:15ch}
   .hero h1 .g{background:linear-gradient(120deg,var(--dg) 0%,var(--teal) 100%);
@@ -49,10 +49,10 @@
     transition:transform .22s cubic-bezier(.4,0,.2,1),box-shadow .22s}
   .path:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
   .path:focus-visible{outline:3px solid var(--rb);outline-offset:3px}
-  .path-img{height:196px;position:relative;overflow:hidden}
+  .path-img{height:260px;position:relative;overflow:hidden}
   .path-img.d{background:linear-gradient(135deg,#DCFCE7,#86EFAC)}
   .path-img.r{background:linear-gradient(135deg,#DBEAFE,#93C5FD)}
-  .path-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .path-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
   .path-img::after{content:'';position:absolute;inset:0;
     background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.28) 100%)}
   .path-tag{position:absolute;top:14px;left:14px;z-index:2;background:rgba(255,255,255,.94);

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Become a Founding Rider — PAXO</title>
+<meta name="description" content="Join PAXO as a founding rider in Pittsburgh. Fair prices, no surge pricing, no hidden fees. Get $20 ride credit and early access at launch."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/paxo.css"/>
+<style>
+  .head{position:relative;overflow:hidden;padding:44px 0 40px;
+    background:radial-gradient(900px 420px at 15% -10%,rgba(37,99,235,.14),transparent 60%),
+      linear-gradient(180deg,#F1F6FF 0%,#FFFFFF 100%)}
+  .head::before{content:'';position:absolute;inset:0;background-image:url('/images/hero-bg.jpg');
+    background-size:cover;background-position:center 60%;opacity:.30;pointer-events:none}
+  .head-in{position:relative;z-index:2;text-align:center;max-width:660px;margin:0 auto}
+  .head h1{font-size:clamp(30px,4.6vw,44px);margin:16px 0 12px}
+  .head h1 .b{background:linear-gradient(120deg,var(--rb),var(--violet));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .head p{font-size:16px;color:var(--slate);line-height:1.6;max-width:520px;margin:0 auto}
+
+  .benefits{padding:34px 0 6px}
+  .ben-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .ben{padding:22px 18px;border-radius:var(--r-lg);border:1px solid var(--rb-line);
+    background:var(--rb-wash);text-align:center}
+  .ben-ico{width:44px;height:44px;border-radius:12px;background:#fff;display:flex;
+    align-items:center;justify-content:center;margin:0 auto 13px;box-shadow:var(--shadow-sm);font-size:22px}
+  .ben h3{font-size:15px;font-weight:700;margin-bottom:6px;color:var(--rb-dk)}
+  .ben p{font-size:12.5px;color:var(--slate);line-height:1.5}
+
+  .form-wrap{max-width:640px;margin:0 auto;padding:14px 22px 40px}
+  .submit-note{text-align:center;font-size:12.5px;color:var(--mute);line-height:1.55;margin-top:14px}
+
+  .info-card{max-width:640px;margin:8px auto 0;background:var(--wash);border:1px solid var(--hair);
+    border-radius:var(--r-lg);padding:20px 24px}
+  .info-card h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px;
+    display:flex;align-items:center;gap:8px}
+  .info-card p{font-size:13.5px;color:var(--slate);line-height:1.6}
+
+  .done{max-width:600px;margin:0 auto;padding:56px 22px 40px;text-align:center}
+  .done-tick{width:80px;height:80px;border-radius:50%;margin:0 auto 24px;
+    background:linear-gradient(135deg,var(--rb-lt),var(--rb));display:flex;align-items:center;
+    justify-content:center;box-shadow:0 12px 34px rgba(37,99,235,.36);
+    animation:pop .5s cubic-bezier(.34,1.56,.64,1) both}
+  @keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+  .done h1{font-size:clamp(28px,4.4vw,40px);margin-bottom:12px}
+  .done>p{font-size:16px;color:var(--slate);line-height:1.65;max-width:440px;margin:0 auto 30px}
+  .next{background:var(--paper);border:1px solid var(--hair);border-radius:var(--r-lg);
+    box-shadow:var(--shadow-sm);padding:24px;text-align:left;margin-bottom:24px}
+  .next h4{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);
+    font-weight:700;margin-bottom:15px}
+  .next-item{display:flex;gap:13px;align-items:flex-start;margin-bottom:14px}
+  .next-item:last-child{margin-bottom:0}
+  .next-item .e{font-size:20px;flex-shrink:0;line-height:1.3}
+  .next-item div b{display:block;font-size:14.5px;color:var(--ink);font-weight:700;margin-bottom:2px}
+  .next-item div p{font-size:13px;color:var(--slate);line-height:1.5}
+
+  .share{background:linear-gradient(135deg,var(--rb-wash),#fff);border:1px solid var(--rb-line);
+    border-radius:var(--r-lg);padding:24px;text-align:center}
+  .share h4{font-size:17px;font-weight:800;margin-bottom:6px;color:var(--ink)}
+  .share>p{font-size:13.5px;color:var(--slate);line-height:1.5;margin-bottom:18px}
+  .share-btns{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+  .sbtn{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--hair);background:#fff;cursor:pointer;transition:transform .12s,box-shadow .2s;
+    text-decoration:none;box-shadow:var(--shadow-sm)}
+  .sbtn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .copy-row{display:flex;gap:8px;margin-top:16px}
+  .copy-row input{flex:1;border:1.5px solid var(--hair);border-radius:var(--r-sm);padding:11px 13px;
+    font-size:13px;font-family:inherit;color:var(--slate);background:#fff;outline:none}
+  .copy-btn{background:var(--rb);color:#fff;border:none;border-radius:var(--r-sm);padding:11px 18px;
+    font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap}
+  .copy-btn:hover{background:var(--rb-dk)}
+
+  @media(max-width:720px){.ben-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.ben-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="/">
+      <span class="logo-txt"><span class="logo-pin">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.22)"/>
+          <path d="M8 14.5c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="9" cy="9.5" r="1.4" fill="#fff"/><circle cx="15" cy="9.5" r="1.4" fill="#fff"/></svg>
+      </span>PAX<span style="letter-spacing:-.04em">O</span></span>
+    </a>
+    <a class="btn btn-ghost" href="/" style="padding:9px 16px;font-size:14px">&larr; Home</a>
+  </div>
+</nav>
+
+<div id="flow">
+
+  <div class="prog-wrap">
+    <div class="prog-in">
+      <div class="prog-track"><div class="prog-fill blue" id="prog"></div></div>
+      <div class="prog-txt" id="progtxt">Step 1 of 3</div>
+    </div>
+  </div>
+
+  <header class="head">
+    <div class="shell head-in">
+      <span class="pill pill-live">Founding Rider Waitlist</span>
+      <h1>Fair rides. <span class="b">Honest prices.</span></h1>
+      <p>Be among the first to ride with PAXO. No surge pricing, no hidden fees &mdash; just transparent prices and reliable rides. Founding riders get $20 credit and early access.</p>
+    </div>
+  </header>
+
+  <section class="benefits">
+    <div class="shell">
+      <div class="ben-grid">
+        <div class="ben"><div class="ben-ico">&#128181;</div><h3>$20 Ride Credit</h3><p>Credited to your account when PAXO launches.*</p></div>
+        <div class="ben"><div class="ben-ico">&#128640;</div><h3>Early Access</h3><p>Book rides before the public launch.</p></div>
+        <div class="ben"><div class="ben-ico">&#127873;</div><h3>Referral Rewards</h3><p>Invite friends and earn more ride credit.</p></div>
+        <div class="ben"><div class="ben-ico">&#128153;</div><h3>No Surge &mdash; Ever</h3><p>What you see is what you pay, every time.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="form-wrap">
+    <form name="rider-waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          onsubmit="return submitForm(event)" oninput="updateProgress()">
+      <input type="hidden" name="form-name" value="rider-waitlist"/>
+      <p hidden><label>Skip: <input name="bot-field"/></label></p>
+
+      <div class="fset">
+        <div class="fset-head">
+          <div class="fset-ico" style="background:var(--rb-wash)">&#128100;</div>
+          <div><h3>Personal information</h3><p>So we know who to reach out to.</p></div>
+        </div>
+        <div class="f"><label for="name">Full name</label>
+          <input id="name" name="name" type="text" required autocomplete="name" placeholder="Sarah Chen"/></div>
+        <div class="frow">
+          <div class="f"><label for="email">Email address</label>
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"/></div>
+          <div class="f"><label for="phone">Mobile number</label>
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(412) 555-0199"/></div>
+        </div>
+      </div>
+
+      <div class="fset">
+        <div class="fset-head">
+          <div class="fset-ico" style="background:var(--rb-wash)">&#128205;</div>
+          <div><h3>Where will you ride?</h3><p>Helps us decide which neighborhoods to launch first.</p></div>
+        </div>
+        <div class="frow">
+          <div class="f"><label for="zip">Home ZIP code</label>
+            <input id="zip" name="zip" type="text" required placeholder="15216"/></div>
+          <div class="f"><label for="hood">Neighborhood</label>
+            <select id="hood" name="neighborhood" required>
+              <option value="">Select&hellip;</option>
+              <option>Downtown Pittsburgh</option><option>Shadyside</option><option>Oakland</option>
+              <option>Dormont</option><option>Mt. Lebanon</option><option>Robinson</option>
+              <option>Cranberry</option><option>North Hills</option><option>South Hills</option>
+              <option>Monroeville</option><option>Other</option>
+            </select></div>
+        </div>
+      </div>
+
+      <div class="fset">
+        <div class="fset-head">
+          <div class="fset-ico" style="background:var(--rb-wash)">&#128658;</div>
+          <div><h3>How you'll ride</h3><p>Helps us plan driver supply for your area.</p></div>
+        </div>
+        <div class="f"><label for="freq">How often do you expect to use PAXO?</label>
+          <select id="freq" name="frequency" required>
+            <option value="">Select&hellip;</option>
+            <option>Daily</option><option>Several times a week</option><option>Weekly</option>
+            <option>A few times a month</option><option>Occasionally</option>
+          </select></div>
+        <div class="f" style="margin-top:14px">
+          <label>When would you most likely ride? <span class="opt">(select all that apply)</span></label>
+          <div class="checks">
+            <label class="chk"><input type="checkbox" name="times" value="Morning"/><span>Morning</span></label>
+            <label class="chk"><input type="checkbox" name="times" value="Afternoon"/><span>Afternoon</span></label>
+            <label class="chk"><input type="checkbox" name="times" value="Evening"/><span>Evening</span></label>
+            <label class="chk"><input type="checkbox" name="times" value="Late night"/><span>Late night</span></label>
+            <label class="chk"><input type="checkbox" name="times" value="Weekends"/><span>Weekends</span></label>
+          </div>
+        </div>
+        <div class="f" style="margin-top:14px"><label for="rref">Referral code <span class="opt">(optional)</span></label>
+          <input id="rref" name="referral_code" type="text" placeholder="Enter a friend's code"/></div>
+      </div>
+
+      <div class="fset">
+        <div class="fset-head">
+          <div class="fset-ico" style="background:var(--rb-wash)">&#127881;</div>
+          <div><h3>You're almost done</h3><p>One last thing and you're on the list.</p></div>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required/>
+          <span>I agree to receive updates about the PAXO launch and accept the
+          <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span>
+        </label>
+      </div>
+
+      <button class="btn btn-ride btn-lg btn-full" type="submit">&#128658; Join the Founding Rider Waitlist</button>
+      <p class="submit-note">No payment information required today. We'll notify you as soon as PAXO launches in your area.</p>
+    </form>
+
+    <div class="info-card" style="margin-top:24px">
+      <h4>&#127963;&#65039; Pennsylvania launch</h4>
+      <p>PAXO is preparing to launch in Pennsylvania pending approval from the Pennsylvania Public Utility Commission (PUC). Founding Riders will receive priority access once service becomes available.</p>
+    </div>
+  </div>
+</div>
+
+<div class="done" id="done" hidden>
+  <div class="done-tick">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+  </div>
+  <h1>Welcome to PAXO!</h1>
+  <p>You're officially on the founding rider waitlist. You'll be the first to experience fair rides with no surge pricing.</p>
+
+  <div class="next">
+    <h4>What you'll get</h4>
+    <div class="next-item"><span class="e">&#9989;</span><div><b>Early access</b><p>Ride before the public launch opens.</p></div></div>
+    <div class="next-item"><span class="e">&#128181;</span><div><b>$20 ride credit</b><p>Waiting in your account at launch.*</p></div></div>
+    <div class="next-item"><span class="e">&#128231;</span><div><b>Launch updates</b><p>Check your inbox &mdash; we just sent a confirmation.</p></div></div>
+    <div class="next-item"><span class="e">&#127873;</span><div><b>Referral rewards</b><p>Invite friends and earn more credit.</p></div></div>
+  </div>
+
+  <div class="share">
+    <h4>Spread the word</h4>
+    <p>Know someone tired of surge pricing? Send them to PAXO.</p>
+    <div class="share-btns">
+      <a class="sbtn" id="sh-wa" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.6 15l-1.3 4.7 4.9-1.3A10 10 0 1012 2z"/></svg>
+      </a>
+      <a class="sbtn" id="sh-fb" target="_blank" rel="noopener" aria-label="Share on Facebook">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12a12 12 0 10-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0024 12z"/></svg>
+      </a>
+      <a class="sbtn" id="sh-x" target="_blank" rel="noopener" aria-label="Share on X">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="#000"><path d="M18.9 1.2h3.7l-8 9.1L24 22.8h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 1.2h7.6l5.2 6.9zm-1.3 19.4h2L6.5 3.3H4.4z"/></svg>
+      </a>
+      <a class="sbtn" id="sh-em" aria-label="Share via email">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+      </a>
+    </div>
+    <div class="copy-row">
+      <input id="reflink" type="text" readonly value="https://paxoride.com"/>
+      <button class="copy-btn" onclick="copyLink()">Copy</button>
+    </div>
+  </div>
+
+  <a class="btn btn-ghost btn-lg" href="/" style="margin-top:26px">Back to home</a>
+</div>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <span class="logo-txt" style="color:#fff"><span class="logo-pin">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.22)"/>
+            <path d="M8 14.5c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="9" cy="9.5" r="1.4" fill="#fff"/><circle cx="15" cy="9.5" r="1.4" fill="#fff"/></svg>
+        </span>PAXO</span>
+        <p class="foot-tag">Zero-commission rideshare. Drivers keep 100%. Riders pay less. Launching in Pittsburgh, PA.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/driver.html">Drive with PAXO</a><a href="/rider.html">Ride with PAXO</a>
+        <a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a>
+        <a href="mailto:hello@paxoride.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      &copy; 2026 Paxo Technologies LLC &nbsp;&middot;&nbsp; paxoride.com<br/>
+      PAXO is launching pending approval from the Pennsylvania Public Utility Commission.
+      *Founding rider credit is subject to launch terms and availability.
+    </div>
+  </div>
+</footer>
+
+<script>
+  var SHARE_MSG = "I just joined PAXO - a new rideshare launching in Pittsburgh with fair prices and no surge pricing. Join the founding waitlist:";
+  var SHARE_URL = "https://paxoride.com";
+
+  function updateProgress(){
+    var form = document.querySelector('form');
+    var radioNames = new Set(); var radioFilled=0, radioTotal=0;
+    form.querySelectorAll('input[type=radio][required]').forEach(function(r){
+      if(!radioNames.has(r.name)){ radioNames.add(r.name); radioTotal++;
+        if(form.querySelector('[name="'+r.name+'"]:checked')) radioFilled++; }
+    });
+    var nonRadio = form.querySelectorAll('input[required]:not([type=radio]), select[required]');
+    var nrFilled=0;
+    nonRadio.forEach(function(el){ if(el.type==='checkbox'){if(el.checked)nrFilled++;} else if(el.value.trim())nrFilled++; });
+    var total = radioTotal + nonRadio.length;
+    var done = radioFilled + nrFilled;
+    var pct = Math.round((done/total)*100);
+    document.getElementById('prog').style.width = pct+'%';
+    var step = pct<40?1:(pct<80?2:3);
+    document.getElementById('progtxt').textContent = pct>=100 ? 'Ready!' : ('Step '+step+' of 3');
+  }
+
+  function submitForm(evt){
+    evt.preventDefault();
+    var form = evt.target;
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Joining...';
+    fetch('/', {method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:new URLSearchParams(new FormData(form)).toString()})
+    .then(function(){ document.getElementById('flow').hidden = true;
+      document.getElementById('done').hidden = false;
+      window.scrollTo({top:0,behavior:'instant'}); })
+    .catch(function(){ btn.textContent='Something went wrong - try again'; btn.disabled=false; });
+    return false;
+  }
+
+  document.getElementById('sh-wa').href = 'https://wa.me/?text='+encodeURIComponent(SHARE_MSG+' '+SHARE_URL);
+  document.getElementById('sh-fb').href = 'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(SHARE_URL);
+  document.getElementById('sh-x').href  = 'https://twitter.com/intent/tweet?text='+encodeURIComponent(SHARE_MSG)+'&url='+encodeURIComponent(SHARE_URL);
+  document.getElementById('sh-em').href = 'mailto:?subject='+encodeURIComponent('Check out PAXO')+'&body='+encodeURIComponent(SHARE_MSG+' '+SHARE_URL);
+
+  function copyLink(){
+    var inp = document.getElementById('reflink');
+    inp.select(); document.execCommand('copy');
+    var b = event.target; var t=b.textContent; b.textContent='Copied!';
+    setTimeout(function(){b.textContent=t;},1600);
+  }
+</script>
+</body>
+</html>

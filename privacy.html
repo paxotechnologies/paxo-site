@@ -4,224 +4,247 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Privacy Policy — PAXO</title>
-<meta name="description" content="How Paxo Technologies LLC collects, uses, and protects information submitted to the PAXO waitlist."/>
+<meta name="description" content="How Paxo Technologies LLC collects, uses, and protects information submitted to the PAXO waitlist at paxoride.com."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/paxo.css"/>
 <style>
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{
-    --teal:#0D9488;--teal-lt:#14B8A8;--navy:#0B1F3A;
-    --white:#fff;--grey:#94A3B8;--grey-lt:#CBD5E1;--line:rgba(255,255,255,.08);
-  }
-  body{background:var(--navy);color:var(--white);
-    font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.65}
-  .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;
-    background-image:linear-gradient(rgba(13,148,136,.04) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(13,148,136,.04) 1px,transparent 1px);
-    background-size:48px 48px}
-
-  .wrap{position:relative;z-index:1;max-width:740px;margin:0 auto;padding:40px 22px 80px}
-
-  .top{display:flex;align-items:center;gap:12px;margin-bottom:44px}
-  .mark{width:40px;height:40px;background:var(--teal);border-radius:12px;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 0 26px rgba(13,148,136,.4)}
-  .word{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;letter-spacing:.2em}
-
-  .back{display:inline-flex;align-items:center;gap:6px;color:var(--grey);
-    font-size:13px;text-decoration:none;margin-bottom:26px}
-  .back:hover{color:var(--white)}
-
-  h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,5vw,40px);
-    font-weight:700;letter-spacing:-.02em;margin-bottom:10px}
-  .updated{font-size:13px;color:var(--grey);margin-bottom:36px}
-
-  .intro{background:rgba(13,148,136,.08);border:1px solid rgba(13,148,136,.22);
-    border-radius:13px;padding:18px 20px;margin-bottom:38px;font-size:14px;
-    color:var(--grey-lt)}
-  .intro strong{color:var(--white)}
-
-  h2{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600;
-    margin:34px 0 12px;color:var(--teal-lt)}
-  p{font-size:14.5px;color:var(--grey-lt);margin-bottom:14px}
-  ul{list-style:none;margin:0 0 16px}
-  li{font-size:14.5px;color:var(--grey-lt);display:flex;gap:10px;
-    align-items:flex-start;margin-bottom:9px;line-height:1.6}
-  li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal-lt);
-    flex-shrink:0;margin-top:9px}
-  a{color:var(--teal-lt)}
-  strong{color:var(--white);font-weight:600}
-
-  table{width:100%;border-collapse:collapse;margin:6px 0 18px;font-size:14px}
-  th{text-align:left;padding:10px 12px;background:rgba(255,255,255,.05);
-    color:var(--white);font-weight:600;font-size:13px;border:1px solid var(--line)}
-  td{padding:10px 12px;border:1px solid var(--line);color:var(--grey-lt)}
-
-  .note{border-left:2px solid var(--teal);padding:2px 0 2px 16px;margin:18px 0;
-    font-size:14px;color:var(--grey)}
-
-  footer{margin-top:56px;border-top:1px solid var(--line);padding-top:22px;
-    font-size:12px;color:var(--grey);line-height:1.7}
-  footer a{color:var(--grey-lt);text-decoration:none}
-  footer a:hover{color:var(--teal-lt)}
+  .doc-head{padding:44px 0 30px;
+    background:radial-gradient(800px 380px at 20% -20%,rgba(22,163,74,.10),transparent 60%),
+      linear-gradient(180deg,#F6FCF8 0%,#FFFFFF 100%)}
+  .doc{max-width:760px;margin:0 auto;padding:0 22px 60px}
+  .doc h1{font-size:clamp(30px,5vw,44px);margin-bottom:8px}
+  .updated{font-size:13.5px;color:var(--mute);font-weight:600}
+  .tldr{background:linear-gradient(135deg,var(--dg-wash),#fff);
+    border:1px solid var(--dg-line);border-radius:var(--r-lg);
+    padding:20px 22px;margin:28px 0 34px}
+  .tldr b{color:var(--ink)}
+  .tldr p{font-size:14.5px;color:var(--slate);line-height:1.65}
+  .doc h2{font-size:20px;font-weight:800;color:var(--navy);margin:34px 0 11px;
+    letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .doc h2 .n{width:26px;height:26px;border-radius:8px;background:var(--dg-wash);
+    color:var(--dg-dk);font-size:12px;font-weight:800;display:flex;
+    align-items:center;justify-content:center;flex-shrink:0}
+  .doc p{font-size:15px;color:var(--slate);margin-bottom:13px;line-height:1.7}
+  .doc ul{list-style:none;margin:0 0 15px}
+  .doc li{font-size:15px;color:var(--slate);display:flex;gap:11px;
+    align-items:flex-start;margin-bottom:9px;line-height:1.65}
+  .doc li::before{content:'';width:6px;height:6px;border-radius:50%;
+    background:var(--dg);flex-shrink:0;margin-top:9px}
+  .doc a{color:var(--rb);font-weight:600}
+  .doc strong{color:var(--ink);font-weight:700}
+  .tbl{width:100%;border-collapse:collapse;margin:8px 0 20px;
+    border-radius:var(--r-sm);overflow:hidden;box-shadow:var(--shadow-sm)}
+  .tbl th{text-align:left;padding:12px 15px;background:var(--navy);color:#fff;
+    font-size:13px;font-weight:700}
+  .tbl td{padding:13px 15px;border-bottom:1px solid var(--hair);
+    font-size:14px;color:var(--slate);line-height:1.6;vertical-align:top}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl tr:nth-child(even) td{background:var(--wash)}
+  .callout{border-left:3px solid var(--dg);background:var(--dg-wash);
+    border-radius:0 var(--r-sm) var(--r-sm) 0;padding:14px 18px;margin:18px 0}
+  .callout p{font-size:14px;color:#14532D;margin:0;line-height:1.6}
+  .backlink{display:inline-flex;align-items:center;gap:7px;color:var(--mute);
+    font-size:14px;text-decoration:none;font-weight:600;margin-bottom:20px}
+  .backlink:hover{color:var(--navy)}
 </style>
 </head>
 <body>
-<div class="bg-grid"></div>
-<div class="wrap">
 
-  <div class="top">
-    <div class="mark">
-      <svg width="22" height="22" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-        <path d="M8 20L10.5 13H25.5L28 20" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-        <rect x="6" y="20" width="24" height="8" rx="3" fill="#fff" fill-opacity=".16" stroke="#fff" stroke-width="2.2"/>
-        <circle cx="11" cy="28" r="2.4" fill="#fff"/><circle cx="25" cy="28" r="2.4" fill="#fff"/>
-      </svg>
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="/">
+      <span class="logo-txt"><span class="logo-pin">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.22)"/>
+          <path d="M8 14.5c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="9" cy="9.5" r="1.4" fill="#fff"/><circle cx="15" cy="9.5" r="1.4" fill="#fff"/></svg>
+      </span>PAX<span style="letter-spacing:-.04em">O</span></span>
+    </a>
+    <div style="display:flex;gap:9px;align-items:center">
+      <a class="btn btn-ghost" href="/driver.html" style="padding:9px 16px;font-size:14px">Drive</a>
+      <a class="btn btn-ride" href="/rider.html" style="padding:9px 16px;font-size:14px">Ride</a>
     </div>
-    <div class="word">PAXO</div>
+  </div>
+</nav>
+
+<header class="doc-head">
+  <div class="doc">
+    <a class="backlink" href="/">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to PAXO
+    </a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 14 July 2026</p>
+  </div>
+</header>
+
+<main class="doc">
+
+  <div class="tldr">
+    <p><b>The short version:</b> we collect only what we need to tell you when PAXO launches and to
+    work out where to launch first. We don't sell your information, we don't share it with advertisers,
+    and you can ask us to delete it at any time by emailing
+    <a href="mailto:privacy@paxoride.com">privacy@paxoride.com</a>.</p>
   </div>
 
-  <a class="back" href="/">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    Back to PAXO
-  </a>
-
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 14 July 2026</p>
-
-  <div class="intro">
-    <strong>The short version:</strong> we collect only what we need to tell you when PAXO launches.
-    We do not sell your information, we do not share it with advertisers, and you can ask us to
-    delete it at any time by emailing <a href="mailto:privacy@paxoride.com">privacy@paxoride.com</a>.
-  </div>
-
-  <h2>Who we are</h2>
+  <h2><span class="n">1</span> Who we are</h2>
   <p>
     This policy covers <strong>paxoride.com</strong>, operated by <strong>Paxo Technologies LLC</strong>
-    ("PAXO", "we", "us"), a Pennsylvania limited liability company. PAXO is building a
-    zero-commission rideshare platform launching in Pittsburgh, Pennsylvania, pending approval
-    from the Pennsylvania Public Utility Commission.
+    ("PAXO", "we", "us"). PAXO is building a zero-commission rideshare platform intended to launch in
+    Pittsburgh, Pennsylvania, pending approval from the Pennsylvania Public Utility Commission.
   </p>
 
-  <h2>What this policy covers</h2>
+  <h2><span class="n">2</span> What this policy covers</h2>
   <p>
     This policy applies only to information you give us through the waitlist forms on this website.
-    It does not cover the PAXO mobile apps, which are not yet available. When those launch, we will
+    It does not cover the PAXO mobile apps, which are not yet available. When those launch, we'll
     publish a separate, fuller privacy policy covering ride data, location, and payments.
   </p>
 
-  <h2>What we collect</h2>
+  <h2><span class="n">3</span> What we collect</h2>
   <p>We collect only what you type into the waitlist form. Nothing more.</p>
 
-  <table>
-    <tr><th>If you join as</th><th>We collect</th></tr>
+  <table class="tbl">
+    <tr><th style="width:26%">If you join as</th><th>We collect</th></tr>
     <tr>
       <td><strong>A driver</strong></td>
-      <td>Name, phone number, email, whether you hold a valid Pennsylvania driver's licence (yes/no),
-      whether you have vehicle insurance (yes/no), preferred driving area, and availability.</td>
+      <td>Name, email address, mobile number, whether you hold a valid Pennsylvania driver's license
+      (yes/no), whether you have vehicle insurance (yes/no), preferred driving area, availability,
+      when you could start driving, and a referral code if you enter one.</td>
     </tr>
     <tr>
       <td><strong>A rider</strong></td>
-      <td>Name, email, phone number, ZIP code or neighbourhood, and a referral code if you enter one.</td>
+      <td>Name, email address, mobile number, home ZIP code, neighborhood, how often you expect to
+      ride, what times of day you'd ride, and a referral code if you enter one.</td>
     </tr>
   </table>
 
-  <div class="note">
-    We deliberately do <strong>not</strong> collect driver's licence numbers, insurance policy details,
-    vehicle identification, bank details, or government IDs at this stage. Those are only requested
-    during real driver onboarding inside the app, after launch and after regulatory approval.
+  <div class="callout">
+    <p><strong>What we deliberately don't collect:</strong> driver's license numbers or expiry dates,
+    insurance policy numbers or expiry dates, vehicle identification, bank or payment details, or
+    government IDs. Those are only requested during real onboarding inside the app &mdash; after launch,
+    and after regulatory approval. There's no reason to hold that data about people who aren't yet users.</p>
   </div>
 
   <p>
     Our hosting provider also records standard technical information automatically, such as your IP
     address, browser type, and the time of your visit. This is used for security and to keep the site
-    running, not to build a profile of you.
+    running &mdash; not to build a profile of you.
   </p>
 
-  <h2>Why we collect it</h2>
+  <h2><span class="n">4</span> Why we collect it</h2>
   <ul>
-    <li><strong>To contact you about the launch</strong> — the main reason. We will email or text you when PAXO opens in your area.</li>
-    <li><strong>To understand demand</strong> — how many drivers and riders are interested, and in which neighbourhoods, so we know where to launch first.</li>
-    <li><strong>To give you what we promised</strong> — founding driver priority, or founding rider credit.</li>
-    <li><strong>To prevent spam and abuse</strong> — filtering out automated or fraudulent submissions.</li>
+    <li><strong>To contact you about the launch</strong> &mdash; the main reason. We'll email you when PAXO opens in your area.</li>
+    <li><strong>To decide where to launch first</strong> &mdash; your neighborhood and driving area tell us where demand is.</li>
+    <li><strong>To plan driver supply</strong> &mdash; knowing when riders expect to travel helps us have drivers available at the right times.</li>
+    <li><strong>To give you what we promised</strong> &mdash; founding driver priority, or founding rider credit.</li>
+    <li><strong>To prevent spam and abuse</strong> &mdash; filtering out automated or fraudulent submissions.</li>
   </ul>
   <p>
-    We will not use your information for any purpose unrelated to the PAXO launch without asking you first.
+    We won't use your information for any purpose unrelated to the PAXO launch without asking you first.
   </p>
 
-  <h2>Who we share it with</h2>
+  <h2><span class="n">5</span> Who we share it with</h2>
   <p>
     <strong>We do not sell your personal information. We do not share it with advertisers or data brokers.</strong>
   </p>
   <p>We use a small number of service providers to run this website, who process data on our behalf:</p>
   <ul>
-    <li><strong>Netlify</strong> — hosts this website and stores waitlist form submissions.</li>
-    <li><strong>Namecheap</strong> — provides our domain name.</li>
+    <li><strong>Netlify</strong> &mdash; hosts this website and stores waitlist form submissions.</li>
+    <li><strong>Resend</strong> &mdash; sends the confirmation email after you join.</li>
+    <li><strong>Namecheap</strong> &mdash; provides our domain name.</li>
   </ul>
   <p>
-    We may also disclose information if we are legally required to — for example, in response to a valid
-    court order, or a lawful request from the Pennsylvania Public Utility Commission or another regulator.
+    We may also disclose information if legally required &mdash; for example, in response to a valid court
+    order, or a lawful request from the Pennsylvania Public Utility Commission or another regulator.
   </p>
 
-  <h2>How long we keep it</h2>
+  <h2><span class="n">6</span> How long we keep it</h2>
   <p>
-    We keep waitlist information until the earlier of: PAXO launching and you becoming a user (at which
-    point your account information is governed by our full app privacy policy); you asking us to delete
-    it; or <strong>24 months</strong> from the date you signed up. If PAXO does not launch, we will delete
-    all waitlist data within 90 days of that decision.
+    We keep waitlist information until the earliest of: PAXO launching and you becoming a user (at which
+    point your account information is governed by our full app privacy policy); you asking us to delete it;
+    or <strong>24 months</strong> from the date you signed up. If PAXO does not launch, we'll delete all
+    waitlist data within 90 days of that decision.
   </p>
 
-  <h2>Your choices and rights</h2>
+  <h2><span class="n">7</span> Your choices and rights</h2>
   <ul>
-    <li><strong>Ask what we hold</strong> — request a copy of the information we have about you.</li>
-    <li><strong>Correct it</strong> — tell us if anything is wrong and we will fix it.</li>
-    <li><strong>Delete it</strong> — ask us to remove you from the waitlist entirely.</li>
-    <li><strong>Stop hearing from us</strong> — unsubscribe at any time; every email will include a link.</li>
+    <li><strong>Ask what we hold</strong> &mdash; request a copy of the information we have about you.</li>
+    <li><strong>Correct it</strong> &mdash; tell us if anything is wrong and we'll fix it.</li>
+    <li><strong>Delete it</strong> &mdash; ask us to remove you from the waitlist entirely.</li>
+    <li><strong>Stop hearing from us</strong> &mdash; unsubscribe at any time; just reply to any email we send.</li>
   </ul>
   <p>
-    Email <a href="mailto:privacy@paxoride.com">privacy@paxoride.com</a> and we will respond within 30 days.
-    You do not need to give a reason.
+    Email <a href="mailto:privacy@paxoride.com">privacy@paxoride.com</a> and we'll respond within 30 days.
+    You don't need to give a reason.
   </p>
 
-  <h2>Cookies</h2>
+  <h2><span class="n">8</span> Cookies</h2>
   <p>
     This website does not use advertising or tracking cookies. Our hosting provider may set essential
     cookies required for the site to function and to protect against spam.
   </p>
 
-  <h2>How we protect your information</h2>
+  <h2><span class="n">9</span> How we protect your information</h2>
   <p>
-    The site is served over HTTPS, and form submissions are transmitted encrypted. Access to waitlist
-    data is limited to people at PAXO who need it. No system is perfectly secure, which is one of the
+    The site is served over HTTPS, and form submissions are transmitted encrypted. Access to waitlist data
+    is limited to people at PAXO who need it. No system is perfectly secure &mdash; which is one of the
     reasons we ask for as little as possible at this stage.
   </p>
 
-  <h2>Children</h2>
+  <h2><span class="n">10</span> Children</h2>
   <p>
-    PAXO is not intended for anyone under 18, and we do not knowingly collect information from children.
-    If you believe a child has submitted information to us, email us and we will delete it.
+    PAXO is not intended for anyone under 18, and we don't knowingly collect information from children.
+    If you believe a child has submitted information to us, email us and we'll delete it.
   </p>
 
-  <h2>Changes to this policy</h2>
+  <h2><span class="n">11</span> Changes to this policy</h2>
   <p>
-    If we change this policy, we will update the date at the top of this page. If the change is significant
-    — for example, if we start using your information for a new purpose — we will email everyone on the
-    waitlist before it takes effect.
+    If we change this policy, we'll update the date at the top of this page. If a change is significant
+    &mdash; for example, if we start using your information for a new purpose &mdash; we'll email everyone
+    on the waitlist before it takes effect.
   </p>
 
-  <h2>Contact us</h2>
+  <h2><span class="n">12</span> Contact us</h2>
   <p>
     <strong>Paxo Technologies LLC</strong><br/>
     Pittsburgh, Pennsylvania, United States<br/>
-    Privacy enquiries: <a href="mailto:privacy@paxoride.com">privacy@paxoride.com</a>
+    Privacy enquiries: <a href="mailto:privacy@paxoride.com">privacy@paxoride.com</a><br/>
+    General enquiries: <a href="mailto:hello@paxoride.com">hello@paxoride.com</a>
   </p>
 
-  <footer>
-    &copy; 2026 Paxo Technologies LLC &nbsp;·&nbsp; <a href="/">paxoride.com</a><br/>
-    PAXO is launching pending Pennsylvania Public Utility Commission approval.
-  </footer>
+  <p style="margin-top:26px;font-size:14px">
+    See also our <a href="/terms.html">Terms of Service</a>.
+  </p>
 
-</div>
+</main>
+
+<footer class="foot">
+  <div class="shell">
+    <div class="foot-grid">
+      <div>
+        <span class="logo-txt" style="color:#fff"><span class="logo-pin">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,.22)"/>
+            <path d="M8 14.5c1.2 1.4 2.5 2 4 2s2.8-.6 4-2" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="9" cy="9.5" r="1.4" fill="#fff"/><circle cx="15" cy="9.5" r="1.4" fill="#fff"/></svg>
+        </span>PAXO</span>
+        <p class="foot-tag">Zero-commission rideshare. Drivers keep 100%. Riders pay less. Launching in Pittsburgh, PA.</p>
+      </div>
+      <div class="foot-links">
+        <a href="/driver.html">Drive with PAXO</a><a href="/rider.html">Ride with PAXO</a>
+        <a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a>
+        <a href="mailto:hello@paxoride.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="foot-legal">
+      &copy; 2026 Paxo Technologies LLC &nbsp;&middot;&nbsp; paxoride.com<br/>
+      PAXO is launching pending approval from the Pennsylvania Public Utility Commission.
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
